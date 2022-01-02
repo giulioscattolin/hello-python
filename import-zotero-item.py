@@ -1,5 +1,3 @@
-#!/usr/local/bin/python3
-
 import csv
 from string import Template
 import sys
@@ -25,8 +23,8 @@ class App:
             Author: $Author
             URL: $Url
             DOI: $DOI
+            tags: zotero
             ---
-            
         """))
 
     def checkArgv(self, argv):
@@ -42,4 +40,4 @@ class App:
             print(self.template.substitute(SubscriptableDictReader(reader)))
 
 if __name__ == "__main__":
-   App(sys.argv).execute()
+    App(sys.argv).execute()
